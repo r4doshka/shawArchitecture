@@ -1,0 +1,26 @@
+body{
+  font-family: $font-primary;
+
+}
+*{
+  transition: all 0.4s;
+}
+
+.flexbox{
+  display: flex;
+}
+.align-center{
+  align-items: center;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.flexwrap{
+  flex-wrap: wrap;
+}
+.nopadding{
+  padding: 0;
+}
+.nomargin{
+  margin: 0;
+}

@@ -23,7 +23,8 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/public/bundle'),
         filename: 'bundle.js',
-        publicPath: '/bundle/'
+        publicPath: '/bundle/',
+        library: 'jQuery'
     },
     module: {
         loaders: [
