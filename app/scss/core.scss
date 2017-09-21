@@ -1,10 +1,9 @@
 body{
   font-family: $font-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
 
-}
-*{
-  transition: all 0.4s;
-}
 
 .flexbox{
   display: flex;
@@ -12,15 +11,33 @@ body{
 .align-center{
   align-items: center;
 }
+.align-end{
+  align-items: flex-end;
+}
+.align-self-stretch{
+  align-self: stretch;
+}
+.justify-center{
+  justify-content: center;
+}
 .justify-between{
   justify-content: space-between;
 }
 .flexwrap{
   flex-wrap: wrap;
 }
+.justify-end{
+  justify-content: flex-end;
+}
 .nopadding{
   padding: 0;
 }
 .nomargin{
   margin: 0;
+}
+
+.col-xs-0 {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }

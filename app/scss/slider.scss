@@ -1,0 +1,185 @@
+$block : ".shaw-slider";
+
+#{$block}{
+  position: relative;
+  .slick-slide{
+    outline-width: 0;
+  }
+  &-item{
+    position: relative;
+    &-description{
+      position: absolute;
+      top: 20px;
+      left: 150px;
+      @media screen and (max-width: 1200px) {
+        left: 350px;
+      }
+      @media screen and (max-width: 992px) {
+        left: 320px;
+        top: 13px;
+      }
+      @media screen and (max-width: 768px) {
+        left: 50%;
+        margin-left: -150px;
+      }
+      @media screen and (max-width: 768px) {
+        margin-left: -130px;
+      }
+    }
+  }
+  &__hero{
+    .slick-dots{
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+      @extend .flexbox;
+      padding: 0;
+      margin: 0;
+      @media screen and (max-width: 768px) {
+        bottom: 120px;
+      }
+      li{
+        margin-right: 10px;
+        list-style: none;
+        &:last-of-type{
+          margin-right: 0;
+        }
+        &.slick-active{
+          button{
+            background: $color2;
+          }
+        }
+      }
+      button{
+        padding: 0;
+        width: 27px;
+        height: 5px;
+        background: $color;
+        border: none;
+        text-indent: -999999px;
+        &:focus,
+        &:active,
+        &:focus:active{
+          outline:none;
+        }
+      }
+    }
+  }
+  &__product{
+    .slick-arrow{
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      padding: 0;
+      border:none;
+      width: 37px;
+      height: 57px;
+      margin-top: -28px;
+      text-indent: -9999999px;
+      background-image: url('../images/shaw-slider-arrow-white.png');
+      background-size: contain;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      z-index: 100;
+      &:focus,
+      &:active{
+        outline: none;
+      }
+      &.slick-prev{
+        left: 40px;
+        right: inherit;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__projects{
+    #{$block}{
+      &-item{
+        padding: 10px;
+        @media screen and (max-width: 768px){
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    .slick-list{
+      margin-bottom: 50px;
+    }
+    .slick-dots{
+      @extend .flexbox;
+      @extend .justify-center;
+      padding: 0;
+      margin: 0;
+      li{
+        margin-right: 20px;
+        list-style: none;
+        &:last-of-type{
+          margin-right: 0;
+        }
+        &.slick-active{
+          button{
+            background: $color2;
+          }
+        }
+      }
+      button{
+        padding: 0;
+        width: 6px;
+        height: 6px;
+        background: $color6;
+        border: none;
+        text-indent: -999999px;
+        &:focus,
+        &:active,
+        &:focus:active{
+          outline:none;
+        }
+      }
+    }
+  }
+  &-filter{
+    .shaw-btn-filter{
+      margin-right: 40px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  &__reviews{
+    .slick-arrow{
+      position: absolute;
+      right: 0;
+      top: -153px;
+      padding: 0;
+      border:none;
+      width: 13px;
+      height: 23px;
+      text-indent: -9999999px;
+      background-image: url('../images/slider-control.png');
+      background-size: contain;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      &:focus,
+      &:active{
+        outline: none;
+      }
+      &.slick-next{
+        transform: rotate(180deg);
+        &:hover{
+          background-image: url('../images/slider-control-active.png');
+          transform: rotate(0);
+        }
+      }
+      &.slick-prev{
+        right: 30px;
+        &:hover{
+          background-image: url('../images/slider-control-active.png');
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

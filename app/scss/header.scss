@@ -1,3 +1,59 @@
-.header{
+$block : ".shaw-header";
 
+#{$block}{
+  padding: 30px 0;
+  &-wrap{
+    @extend .flexbox;
+    @extend .align-center;
+  }
+  &-group{
+    @extend .flexbox;
+    @extend .justify-end;
+    @extend .align-center;
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+  &-inner{
+    @extend .shaw-header-group;
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+  &-logo{
+    @media screen and (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+  &-menu{
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &-sub{
+    padding: 30px 0 0;
+    margin-bottom: 70px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+  &-contacts{
+    margin: 0 0 0 30px;
+    padding:10px 0 10px 30px;
+    font-size: 12px;
+    font-weight: 600;
+    color: $color1;
+    text-transform: uppercase;
+    border-left:1px solid $color1;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+    &-wrap{
+      @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
 }

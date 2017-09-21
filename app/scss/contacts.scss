@@ -1,0 +1,48 @@
+$block : ".shaw";
+
+#{$block}{
+  &-contacts-box{
+    margin-bottom: 100px;
+  }
+  &-phone{
+    @media screen and (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+    &-title{
+      margin-bottom: 25px;
+      font-size: 13px;
+      line-height: 1;
+      color: $color7;
+    }
+    &-note{
+      font-size: 26px;
+      line-height: 1;
+      color: $color4;
+    }
+  }
+  &-contact{
+    &-info{
+      margin-bottom: 40px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      &-header{
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 1px;
+        color: $color4;
+        font-weight: 500;
+      }
+      &-description{
+        p{
+          font-size: 14px;
+          line-height: 18px;
+          color: $color7;
+        }
+      }
+    }
+    &-feedback{
+      padding: 0 0 100px;
+    }
+  }
+}

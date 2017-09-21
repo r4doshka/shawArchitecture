@@ -1,0 +1,80 @@
+$block : ".shaw-menu";
+
+#{$block}{
+  @extend .flexbox;
+  margin: 0;
+  padding: 0;
+  @media screen and (max-width: 768px){
+   flex-wrap: wrap;
+  }
+  &-item{
+    margin-right: 34px;
+    list-style: none;
+    @media screen and (max-width: 992px){
+      margin-right: 15px;
+    }
+    @media screen and (max-width: 768px){
+      flex:0 0 100%;
+      margin-right: 0;
+      text-align: center;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    &-link{
+      position: relative;
+      font-size: 12px;
+      font-weight: 600;
+      color: $color1;
+      text-transform: uppercase;
+      @media screen and (max-width: 768px){
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      &:before{
+        content: '';
+        display: none;
+        height: 2px;
+        position: absolute;
+        bottom:-8px;
+        left: -6px;
+        right: -6px;
+        background: $color2;
+        -webkit-animation-duration: 0.6s;
+        animation-duration: 0.6s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: zoomIn;
+        animation-name: zoomIn;
+        @media screen and (max-width: 768px){
+          bottom: -4px;
+        }
+      }
+      &.active{
+        &:before{
+          display: block;
+        }
+      }
+      &:hover{
+        text-decoration: none;
+        color: $color1;
+        &:before{
+          display: block;
+          @media screen and (max-width: 768px){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &-toggle{
+    display: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    @media screen and (max-width: 768px){
+      display: block;
+    }
+  }
+}

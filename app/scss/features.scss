@@ -1,0 +1,53 @@
+$block : ".shaw-features";
+
+#{$block}{
+  padding: 150px 0;
+  margin-bottom: 60px;
+  background: url('../images/bg-dot.png');
+  @media screen and (max-width: 992px) {
+    padding: 75px 0;
+  }
+  &-wrap{
+    padding-top: 100px;
+    @media screen and (max-width: 992px) {
+      padding-top: 50px;
+    }
+    @media screen and (max-width: 768px) {
+      padding-top: 30px;
+    }
+  }
+  &-grid{
+    @extend .flexbox;
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+  &-item{
+    width: calc(1/3*100% - (1 - 1/3)*35px);
+    margin-right: 35px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 20px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &-header{
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 1;
+      color: $color4;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 10px;
+      }
+    }
+    &-description{
+      font-size: 14px;
+      line-height: 30px;
+      color: $color14;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+$block : ".shaw-location";
+
+#{$block}{
+  margin-bottom: 30px;
+  &-header{
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 1;
+    color: $color4;
+  }
+  &-description{
+    p{
+      margin: 0;
+      font-size: 16px;
+      line-height: 30px;
+      color: $color7;
+    }
+  }
+}

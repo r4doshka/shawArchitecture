@@ -1,0 +1,12 @@
+$block : ".shaw-link";
+
+#{$block}{
+  &-detail{
+    font-size:14px;
+    line-height: 24px;
+    color: $color7;
+    &:hover{
+      color: $color7;
+    }
+  }
+}

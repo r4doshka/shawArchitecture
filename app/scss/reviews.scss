@@ -1,0 +1,61 @@
+$block : ".shaw-review";
+
+#{$block}{
+  padding: 120px 0 140px;
+  background: $color8;
+  @media screen and (max-width: 992px) {
+    padding: 100px 0 50px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 50px 0;
+  }
+  &-header{
+    margin-bottom: 70px;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 40px;
+    }
+  }
+  &-grid{
+    padding-top: 50px;
+  }
+  &-card{
+    position: relative;
+    padding: 80px 38px 40px;
+    background: $color;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 70px;
+    }
+    &-image{
+      position: absolute;
+      top:-50px;
+      left: 30px;
+    }
+    &-badge{
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+    &-header{
+      @extend .flexbox;
+      @extend .align-center;
+      margin-bottom: 30px;
+    }
+    &-title{
+      font-size:18px;
+      line-height: 30px;
+      color: $color4;
+    }
+    &-note{
+      padding-left: 4px;
+      font-size: 14px;
+      line-height: 30px;
+      color: $color7;
+    }
+    &-description{
+      padding-right: 60px;
+      font-size: 14px;
+      line-height: 24px;
+      color: $color7;
+    }
+  }
+}

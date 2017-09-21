@@ -1,0 +1,52 @@
+$block : ".shaw-list";
+
+#{$block}{
+  &-simple{
+    @media screen and (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+    &-item{
+      margin-bottom: 30px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      &-value{
+        display: inline-block;
+        font-size: 14px;
+        line-height: 36px;
+        color: $color6;
+      }
+      &-name{
+        display: inline-block;
+        margin-right: 5px;
+        color: $color4;
+        font-size: 14px;
+        line-height: 36px;
+        font-weight: 500;
+      }
+    }
+  }
+  &-properties{
+    &-item{
+      @extend .flexbox;
+      @extend .justify-between;
+      padding: 15px 0;
+      border-bottom: 1px solid $color11;
+      @media screen and (max-width: 992px) {
+        padding: 12px 0;
+      }
+      &-value{
+        font-size: 12px;
+        line-height: 1;
+        color: $color4;
+        font-weight: 400;
+      }
+      &-name{
+        color: $color4;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+$block : ".shaw-social";
+
+#{$block}{
+  &-group{
+    @extend .flexbox;
+    @extend .justify-between;
+  }
+  &-title{
+    font-size: 14px;
+    line-height: 1;
+    fonr-weight: 500;
+  }
+  &-list{
+    &-item{
+      margin-right: 20px;
+      color: $color4;
+      font-size: 14px;
+      @media screen and (max-width: 1200px){
+        margin-right: 10px;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      &:hover{
+        color: $color2;
+      }
+    }
+    &#{$block}-list{
+      &__grey{
+        #{$block}-list{
+          &-item{
+            color: $color7;
+            &:hover{
+              color: $color2;
+            }
+          }
+        }
+      }
+      &__highlighted{
+        #{$block}-list{
+          &-item{
+            &:hover{
+              color: $color15;
+            }
+          }
+        }
+      }
+    }
+  }
+}

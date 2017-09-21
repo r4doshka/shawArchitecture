@@ -1,0 +1,40 @@
+$block : ".shaw-intro";
+
+#{$block}{
+  margin-bottom: 120px;
+  @media screen and (max-width: 992px) {
+    margin-bottom: 60px;
+  }
+  &-header{
+    margin: 0;
+    font-size: 48px;
+    line-height: 60px;
+    color: $color4;
+    font-weight: 500;
+    @media screen and (max-width: 992px) {
+      font-size: 32px;
+      line-height: 38px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  &-top{
+    @extend .flexbox;
+    @extend .align-center;
+    margin: 0 0 80px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+  &-bar{
+    width: 100px;
+    height:6px;
+    margin: 0 0 20px 0;
+    background-color: $color2;
+    @media screen and (max-width: 768px) {
+     display: none;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+$block : ".shaw-info";
+
+#{$block}{
+  padding: 120px 0 190px;
+  *{
+    overflow: visible !important;
+  }
+  @media screen and (max-width: 992px){
+    padding: 100px 0 150px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 60px 0;
+  }
+  &-wrap{
+    @extend .flexbox;
+    @extend .flexwrap;
+
+  }
+  &-content{
+    @extend .flexbox;
+    @extend .flexwrap;
+    @media screen and (max-width: 992px){
+      flex-wrap: nowrap;
+      margin-bottom: 40px;
+    }
+  }
+  &-top{
+    flex: 0 0 100%;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 60px;
+    }
+    @media screen and (max-width: 992px) {
+      flex:1;
+      margin-bottom: 0;
+    }
+  }
+  &-bottom{
+    flex: 0 0 100%;
+    @extend .flexbox;
+    @extend .align-end;
+    @extend .align-self-stretch;
+    @media screen and (max-width: 992px) {
+      flex: 0 1 auto;
+      align-items: center;
+      padding-left: 30px;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &-subtitle{
+    margin-bottom: 30px;
+  }
+  &-header{
+    margin-bottom: 50px;
+    @media screen and (max-width: 992px){
+      margin-bottom: 30px;
+    }
+  }
+  &-description{
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 30px;
+    color: $color5;
+  }
+  &-image{
+    position: relative;
+    @media screen and (max-width: 992px) {
+      display: flex;
+      justify-content: center;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      display: block;
+      top: 55%;
+      background: url('../images/shaw-dots.png') no-repeat;
+      left: -100px;
+      right: 100px;
+      bottom: -100px;
+      @media screen and (max-width: 1200px) {
+        left: -30px;
+      }
+      @media screen and (max-width: 992px) {
+        left: 0;
+        right: 50%;
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}

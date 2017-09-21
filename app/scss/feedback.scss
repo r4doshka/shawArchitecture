@@ -1,0 +1,12 @@
+$block : ".shaw-feedback";
+
+#{$block}{
+  padding: 140px 0 100px;
+  @media screen and (max-width: 992px) {
+    padding: 100px 0;
+  }
+  &-header{
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}

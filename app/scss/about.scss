@@ -1,0 +1,13 @@
+$block : ".shaw-about-box";
+
+#{$block}{
+  margin-bottom: 120px;
+  @media screen and (max-width: 992px) {
+    margin-bottom: 60px;
+  }
+  &-header{
+    @media screen and (max-width: 992px) {
+      margin-bottom: 30px;
+    }
+  }
+}

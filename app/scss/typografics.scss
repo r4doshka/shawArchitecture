@@ -1,9 +1,45 @@
-.title-primary{
-
+.shaw-title-primary{
+  margin: 0;
+  font-size: 36px;
+  line-height: 42px;
+  color: $color4;
+  font-weight: 400;
+  @media screen and (max-width: 992px){
+    font-size: 30px;
+  }
+  @media screen and (max-width: 768px){
+    font-size: 24px;
+  }
 }
 
-.sub-title{
+.shaw-title-secondary{
+  position: relative;
+  margin: 0;
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 20px;
+  color: $color7;
+  text-transform: uppercase;
+  word-spacing: 1009px;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 2px;
+    width: 105px;
+    background: $color2;
+  }
+}
 
+.shaw-subtitle{
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: $color2;
 }
 
 .note-primary{
